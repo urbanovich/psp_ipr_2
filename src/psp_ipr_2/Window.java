@@ -133,7 +133,7 @@ public class Window extends JFrame implements MouseListener, MouseMotionListener
         protected void paintComponent(Graphics g){
             super.paintComponent(g);
             try {
-                background = ImageIO.read(new File("/home/dzmitry/NetBeansProjects/psp_ipr_2/src/ocean.jpg"));
+                background = ImageIO.read(getClass().getClassLoader().getResource("resources/ocean.jpg"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -147,10 +147,10 @@ public class Window extends JFrame implements MouseListener, MouseMotionListener
             setOpaque(false);
             setPreferredSize(new Dimension(windowWidth, windowHeight));
             try {
-                ship = ImageIO.read(new File("/home/dzmitry/NetBeansProjects/psp_ipr_2/src/ship.jpeg"));
-                torpedo= ImageIO.read(new File("/home/dzmitry/NetBeansProjects/psp_ipr_2/src/core.jpg"));
-                gun =  ImageIO.read(new File("/home/dzmitry/NetBeansProjects/psp_ipr_2/src/gun.jpg"));
-                fire =  ImageIO.read(new File("/home/dzmitry/NetBeansProjects/psp_ipr_2/src/fire.png"));
+                ship = ImageIO.read(getClass().getClassLoader().getResource("resources/ship.jpeg"));
+                torpedo= ImageIO.read(getClass().getClassLoader().getResource("resources/core.jpg"));
+                gun =  ImageIO.read(getClass().getClassLoader().getResource("resources/gun.jpg"));
+                fire =  ImageIO.read(getClass().getClassLoader().getResource("resources/fire.png"));
             }
             catch (IOException exc) {};
 
